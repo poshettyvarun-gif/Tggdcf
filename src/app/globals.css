@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --forest: #123526;
+  --forest-deep: #0b241a;
+  --forest-soft: #1d4a37;
+  --maroon: #711f31;
+  --maroon-deep: #4e1420;
+  --brass: #ad8a44;
+  --brass-soft: #efe7d3;
+  --paper: #f6f2e9;
+  --paper-line: #e4dac4;
+  --ink: #1b241e;
+  --ink-soft: #4a4237;
+  --muted: #8a8071;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-forest-soft: var(--forest-soft);
+  --color-maroon: var(--maroon);
+  --color-maroon-deep: var(--maroon-deep);
+  --color-brass: var(--brass);
+  --color-brass-soft: var(--brass-soft);
+  --color-paper: var(--paper);
+  --color-paper-line: var(--paper-line);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), sans-serif;
+  line-height: 1.55;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display), serif;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes campaign-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.3s ease;
+}
+
+.animate-campaign-zoom {
+  animation: campaign-zoom 6s ease both;
 }
