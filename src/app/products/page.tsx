@@ -9,8 +9,8 @@ export default function ProductsPage() {
   return (
     <>
       <PageHero eyebrow="Products" title="Vijaya Products" />
-      <div className="mx-auto max-w-[1180px] px-6 py-12">
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="w-full px-6 py-12 md:px-10 lg:px-16">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {PRODUCTS.map((product) => (
             <div key={product.name} className="rounded-md border border-paper-line bg-white p-5 text-center">
               <div className="relative mb-3">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
-import { VerifiedBadge, PlaceholderBadge } from "@/components/Badge";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { VerifiedBadge } from "@/components/Badge";
 
 export const metadata: Metadata = { title: "Contact Us — TGDDCF" };
 
@@ -41,25 +41,32 @@ export default function ContactPage() {
   return (
     <>
       <PageHero eyebrow="Contact" title="Contact Us" />
-      <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-7 px-6 py-12 md:grid-cols-2">
+      <div className="grid w-full grid-cols-1 gap-7 px-6 py-12 md:grid-cols-2 md:px-10 lg:px-16">
         <div>
           <div className="mb-4">
-            <VerifiedBadge>Verified — registered address</VerifiedBadge>
+            <VerifiedBadge>Verified — sourced from tgdairy.telangana.gov.in</VerifiedBadge>
           </div>
           <InfoRow label="Address">Vijaya Bhavan, Lalapet, Tarnaka, Hyderabad – 500017, Telangana</InfoRow>
-          <InfoRow label="Phone">
-            <PlaceholderBadge />
-            <br />
-            +91-XX-XXXX-XXXX
-          </InfoRow>
+          <InfoRow label="Phone">040-27019851 to 52 (2 lines)</InfoRow>
           <InfoRow label="Email">
-            <PlaceholderBadge />
-            <br />
-            info@tgdairy.telangana.gov.in
+            <a href="mailto:md.tgddcf@gmail.com" className="hover:text-maroon hover:underline">
+              md.tgddcf@gmail.com
+            </a>
           </InfoRow>
-          <div className="mt-4.5">
-            <PlaceholderImage label="Map embed pending — Vijaya Bhavan, Lalapet, Tarnaka" aspect="16/10" />
+          <div
+            className="relative mt-4.5 overflow-hidden rounded border border-dashed border-brass bg-white"
+            style={{ aspectRatio: "16/10" }}
+          >
+            <Image
+              src="/images/official/vijaya-logo.png"
+              alt="Vijaya"
+              fill
+              className="object-contain p-10"
+            />
           </div>
+          <p className="mt-2 text-center text-[11px] font-semibold tracking-wide text-[#7a6a3f] uppercase">
+            Map embed pending — Vijaya Bhavan, Lalapet, Tarnaka
+          </p>
         </div>
         <div className="rounded-md border border-paper-line bg-white p-5">
           <h3 className="font-display mb-4 text-base">Send a message</h3>

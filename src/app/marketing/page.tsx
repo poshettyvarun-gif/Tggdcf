@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { PlaceholderBadge } from "@/components/Badge";
+import { VerifiedBadge } from "@/components/Badge";
 import { ListRow } from "@/components/ListRow";
 
 export const metadata: Metadata = { title: "Marketing — TGDDCF" };
@@ -9,19 +9,18 @@ export default function MarketingPage() {
   return (
     <>
       <PageHero eyebrow="Marketing" title="Marketing" />
-      <div className="mx-auto max-w-[820px] px-6 py-12">
-        <div className="mb-3.5">
-          <PlaceholderBadge />
-        </div>
-        <p className="mb-5 text-ink-soft">
-          This section on the real site covers distribution network, parlours, booths, and marketing/dealership
-          information. Replace with actual content.
+      <div className="w-full px-6 py-12 md:px-10 lg:px-16">
+        <VerifiedBadge>Verified — sourced from tgdairy.telangana.gov.in</VerifiedBadge>
+        <p className="mt-4 mb-5 text-ink-soft">
+          Vijaya products reach consumers through a statewide network of dairy parlours, booths, and dealers.
+          The Federation maintains an official parlour list record.
         </p>
         <ul>
-          <ListRow title="Vijaya Priority Parlours" detail="Placeholder" />
-          <ListRow title="Distribution & Dealership" detail="Placeholder" />
-          <ListRow title="Booth / Outlet Locations" detail="Placeholder" />
+          <ListRow title="Dairy Parlours List" />
         </ul>
+        <p className="mt-4 text-[11px] text-muted">
+          The Federation has not published further distribution/dealership figures as of this writing.
+        </p>
       </div>
     </>
   );

@@ -39,7 +39,7 @@ const WHY = [
 export default function HomePage() {
   return (
     <>
-      <div className="mx-auto max-w-[1180px] px-6 pt-5">
+      <div className="w-full px-6 pt-5 md:px-10 lg:px-16">
         <VerifiedBadge>Verified — matches official site (screenshot, Aug 2026)</VerifiedBadge>
 
         <div className="mt-4.5 mb-7.5 flex items-center overflow-hidden rounded bg-paper-line text-sm font-semibold">
@@ -69,7 +69,7 @@ export default function HomePage() {
       </div>
 
       <div className="border-t border-b border-paper-line bg-white py-12">
-        <div className="mx-auto max-w-[1180px] px-6">
+        <div className="w-full px-6 md:px-10 lg:px-16">
           <div className="mx-auto mb-8 max-w-[640px] text-center">
             <p className="mb-2 text-[11px] font-bold tracking-[0.18em] text-maroon uppercase">Why Vijaya</p>
             <h2 className="font-display text-[clamp(22px,3vw,28px)] text-forest-deep">

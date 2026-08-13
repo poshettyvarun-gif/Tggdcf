@@ -11,7 +11,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 export function SiteFooter() {
   return (
     <footer className="mt-9 bg-forest-deep pt-10 pb-5.5 text-[#c9d4cd]">
-      <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-5 px-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid w-full grid-cols-1 gap-5 px-6 sm:grid-cols-2 lg:grid-cols-4 md:px-10 lg:px-16">
         <div>
           <h4 className="mb-3 text-xs font-bold tracking-wide text-brass uppercase">Vijaya / TGDDCF</h4>
           <p className="max-w-[220px] text-[12.5px] opacity-85">
@@ -41,9 +41,9 @@ export function SiteFooter() {
           </p>
         </div>
       </div>
-      <div className="mx-auto mt-6 max-w-[1180px] border-t border-brass/25 px-6 pt-4 text-center text-[11px] text-[#8fa095]">
-        Layout scaffold — nav &amp; leadership verified against official site screenshot; all other copy is
-        placeholder pending real content.
+      <div className="mt-6 w-full border-t border-brass/25 px-6 pt-4 text-center text-[11px] text-[#8fa095] md:px-10 lg:px-16">
+        Content sourced from tgdairy.telangana.gov.in where published; sections marked &ldquo;Not yet
+        published&rdquo; reflect gaps in the Federation&rsquo;s own site.
       </div>
     </footer>
   );
